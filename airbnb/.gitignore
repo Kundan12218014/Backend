@@ -1,0 +1,29 @@
+# Node.js
+node_modules/
+.env
+.DS_Store
+*.log
+npm-debug.log*
+
+# OS
+Thumbs.db
+
+# Logs
+debug.log
+
+# Exclude data folder (if you don't want to push sample data)
+data/
+
+# Exclude build output (if any)
+dist/
+build/
+
+# Exclude VSCode settings
+.vscode/
+
+# Exclude coverage reports
+coverage/
+
+# Exclude temp files
+*.tmp
+*.swp
