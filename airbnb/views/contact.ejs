@@ -1,0 +1,17 @@
+<%- include('partials/header') %>
+<%- include('partials/navbar') %>
+  <header>
+    <h1 class="text-3xl font-bold underline text-center">
+      Enter your detail:
+    </h1>
+  </header>
+  <main>
+    <form action='/contact-us' method='POST'>
+      <label for="name">name:</label>
+      <input type='text' name="name" placeholder='enter your name'></input>
+      <label for="email">email:</label>
+      <input type='text' name="email" placeholder='enter your Email'></input>
+      <input type='submit'></input>
+    </form>
+  </main>
+<%- include('partials/footer') %>

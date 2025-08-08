@@ -1,0 +1,36 @@
+<%- include('partials/header') %>
+<%- include('partials/navbar') %>
+ <header class="bg-gradient-to-r from-green-500 to-red-400 py-12 shadow mb-8">
+  <div class="container mx-auto text-center">
+    <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-4 drop-shadow-lg">Welcome to Airbnb</h1>
+    <p class="text-xl md:text-2xl text-white mb-6">Book unique homes and experiences all over the world.</p>
+    <a href="/hosts/add-home" class="inline-block bg-white text-blue-600 font-semibold px-6 py-3 rounded-full shadow hover:bg-blue-50 transition">Become a Host</a>
+  </div>
+</header>
+  <main class="container mx-auto px-4">
+  <section class="mb-12">
+    <h2 class="text-3xl font-bold text-gray-800 mb-4 text-center">Why Airbnb?</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-white rounded-lg shadow p-6 flex flex-col items-center">
+        <svg class="w-12 h-12 text-blue-500 mb-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2l7 7-7 7-7-7 7-7z"></path></svg>
+        <h3 class="font-semibold text-lg mb-2">Unique Stays</h3>
+        <p class="text-gray-600 text-center">Find and book unique accommodations around the world.</p>
+      </div>
+      <div class="bg-white rounded-lg shadow p-6 flex flex-col items-center">
+        <svg class="w-12 h-12 text-pink-500 mb-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle></svg>
+        <h3 class="font-semibold text-lg mb-2">Trusted Hosts</h3>
+        <p class="text-gray-600 text-center">Stay with verified hosts and enjoy a safe experience.</p>
+      </div>
+      <div class="bg-white rounded-lg shadow p-6 flex flex-col items-center">
+        <svg class="w-12 h-12 text-green-500 mb-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg>
+        <h3 class="font-semibold text-lg mb-2">24/7 Support</h3>
+        <p class="text-gray-600 text-center">Get help anytime with our dedicated support team.</p>
+      </div>
+    </div>
+  </section>
+  <section class="text-center">
+    <h2 class="text-2xl font-bold text-gray-800 mb-4">Ready to explore?</h2>
+    <a href="/hosts/homes" class="inline-block bg-blue-600 text-white font-semibold px-8 py-3 rounded-full shadow hover:bg-blue-700 transition">Browse Homes</a>
+  </section>
+</main>
+<%- include('partials/footer') %>
