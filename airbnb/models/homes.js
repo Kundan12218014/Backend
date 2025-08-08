@@ -17,12 +17,7 @@ module.exports = class HomeModel {
       registeredHomes.push(this);
       const homedataPath = path.join(rootDir, 'data', 'homes.json');
       fs.writeFile(homedataPath, JSON.stringify(registeredHomes), err => {
-        if (err) {
-          console.log(err);
-        }
-        else {
-          console.log('data written sucessfully');
-        }
+        err ? console.log(err) : console.log('data written sucessfully');
       });
     })
   }
