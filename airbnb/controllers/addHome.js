@@ -12,15 +12,15 @@ exports.addPostHome=(req, res) => {
   const home=new HomeModel(id,houseName, ownerName,location,Number(price),imageUrl,description);
   home.save();
 
-  res.render("homeAdded",{home,title:"Home Added Successfully"});
+  res.render("host/homeAdded",{home,title:"Home Added Successfully"});
 };
 
 exports.addGetHome=(req, res) => {
-  res.render("addHome", { title: "Add Home" });
+  res.render("host/addHome", { title: "Add Home" });
 }
 
 exports.homeList=async(req, res) => {
   const homes=await HomeModel.getAllHomes((homes=>{
-    res.render('homes', { homes, title: "All Homes" });
+    res.render('store/homes-list', { homes, title: "All Homes" });
   }));
 }

@@ -1,3 +1,3 @@
 exports.userUI=(req, res) => {
-  res.render("home", { title: "Home" });
+  res.render("store/home-page", { title: "Home" });
 }
