@@ -1,0 +1,51 @@
+<%- include('../partials/header') %>
+  <%- include('../partials/navbar') %>
+
+    <main class="flex flex-col items-center justify-center min-h-[60vh]">
+      <div class="bg-white shadow-lg rounded-lg p-8 w-full max-w-xl mt-8">
+        <div class="flex flex-col items-center mb-6">
+          <svg class="w-16 h-16 text-green-500 mb-2" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+          </svg>
+          <h1 class="text-2xl font-bold text-green-600 mb-2">Home Added Successfully!</h1>
+          <p class="text-gray-600">Your home has been listed and is now visible to guests.</p>
+        </div>
+        <div class="flex flex-col md:flex-row gap-6 items-center">
+          <% if (home.imageUrl) { %>
+            <img src="<%= home.imageUrl %>" alt="<%= home.houseName %>"
+              class="w-48 h-32 object-cover rounded-md border" />
+            <% } else { %>
+              <div class="w-48 h-32 flex items-center justify-center bg-gray-200 rounded-md text-gray-400">No Image
+              </div>
+              <% } %>
+                <ul class="flex-1 space-y-2">
+                  <li><span class="font-semibold">Home Name:</span>
+                    <%= home.houseName %>
+                  </li>
+                  <li><span class="font-semibold">Owner Name:</span>
+                    <%= home.ownerName %>
+                  </li>
+                  <li><span class="font-semibold">Location:</span>
+                    <%= home.location %>
+                  </li>
+                  <li><span class="font-semibold">Price per Night:</span> <span class="text-blue-600 font-bold">₹<%=
+                        home.price %></span></li>
+                  <li><span class="font-semibold">Email:</span>
+                    <%= home.email %>
+                  </li>
+                  <% if (home.description) { %>
+                    <li><span class="font-semibold">Description:</span>
+                      <%= home.description %>
+                    </li>
+                    <% } %>
+                </ul>
+        </div>
+        <div class="mt-8 flex justify-center">
+          <a href="/hosts/homes"
+            class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded shadow transition">View All
+            Homes</a>
+        </div>
+      </div>
+    </main>
+    <%- include('../partials/footer') %>

@@ -13,14 +13,14 @@ app.set('views',path.join(rootDir,'views'));
 app.use(express.json());// Parse JSON bodies
 app.use(express.static(path.join(__dirname, 'public')));
 //Local Module
-const userRouter=require('./routes/userRouter');
+const storeRouter=require('./routes/storeRouter');
 const hostRouter=require('./routes/hostRouter');
 const contactRouter=require('./routes/contactRouter');
 const PORT = 3000;
 
 
 
-app.use(userRouter);
+app.use(storeRouter);
 
 app.use((req, res, next) => {
   console.log(`[LOG] ${req.url} ${req.method}`)
@@ -32,7 +32,7 @@ app.use('/hosts',hostRouter);
 app.use(contactRouter);
 
 app.use((req,res)=>{
-   res.render("404", { title: "Page Not Found" });
+   res.render("errors/404", { title: "Page Not Found" });
 })
 
 
